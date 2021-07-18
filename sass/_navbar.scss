@@ -1,0 +1,101 @@
+.navbar {
+  height: 40rem;
+  background-image: url(../images/image-hero-desktop.jpg);
+  background-size: cover;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5rem 10% 0 10%;
+
+  @media only screen and (max-width: $bp-mobile) {
+    background-image: url(../images/image-hero-mobile.jpg);
+    background-size: cover;
+  }
+
+  .logo-main {
+    width: 13rem;
+    height: 2rem;
+  }
+
+  &__items {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: flex-start;
+    position: relative;
+    transition: all 0.2s;
+
+    @media only screen and (max-width: $bp-mobile) {
+      display: none;
+      position: absolute;
+      height: 30vh;
+      width: 60vw;
+      top: 20rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 5rem;
+      background-color: #fff;
+      box-shadow: 1rem 2rem 5rem $color-grey;
+      border-radius: 1rem;
+      z-index: 10;
+    }
+
+    &--1,
+    &--2,
+    &--3 {
+      a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+
+        @media only screen and (max-width: $bp-mobile) {
+          //display: none;
+
+          flex-direction: column;
+          align-items: center;
+
+          margin-top: 2rem;
+          padding: 1rem;
+          color: $color-black;
+          font-size: 1.8rem;
+        }
+
+        &:hover {
+          font-weight: 500;
+          text-shadow: rgba(0, 0, 0, 0.3);
+          @media only screen and (max-width: $bp-mobile) {
+            background-color: rgba($color-grey, 0.1);
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+
+    @media only screen and (max-width: $bp-mobile) {
+      cursor: pointer;
+      padding: 1rem;
+      border: none;
+      background-color: transparent;
+      transition: all 0.2s;
+      display: block;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

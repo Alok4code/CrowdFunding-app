@@ -1,0 +1,145 @@
+.main__section {
+  font-family: &font-primary;
+  transform: translateY(-8rem);
+
+  &--1 {
+    background-color: #fff;
+    border-radius: 0.8rem;
+    padding: 2.4rem 1rem;
+    text-align: center;
+    border: $border;
+    height: 26.8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+
+    @media only screen and (max-width: $bp-mobile) {
+      height: 100%;
+    }
+
+    .main--logo {
+      transform: translateY(-4.3rem);
+
+      @media only screen and (max-width: $bp-mobile) {
+        transform: translateY(-5.3rem);
+      }
+    }
+
+    .heading {
+      font-family: &font-primary;
+      transform: translateY(-5.3rem);
+    }
+
+    .main--btn {
+      width: 90%;
+      height: 5.6rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: translateY(-2.8rem);
+
+      @media only screen and (max-width: $bp-mobile) {
+        width: 90%;
+        height: 7rem;
+      }
+
+      &-one,
+      &-bookmark {
+        font-family: $font-primary;
+        font-weight: 600;
+        font-size: 1.8rem;
+        border-style: none;
+
+        border-radius: 5rem;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &-one {
+        color: #fff;
+        padding: 1.7rem;
+        width: 20.4rem;
+        background-color: $color-primary-light;
+
+        @media only screen and (max-width: $bp-mobile) {
+          width: 22rem;
+          height: 7rem;
+        }
+
+        &:hover {
+          background-color: $color-primary-dark;
+          transform: translateY(-0.1rem);
+        }
+      }
+
+      &-bookmark {
+        width: 17.4rem;
+        padding-right: 2rem;
+        color: $color-grey;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        svg > g > circle {
+          fill: currentColor;
+        }
+
+        @media only screen and (max-width: $bp-mobile) {
+          width: 7.2rem;
+          padding-right: 0rem;
+
+          span {
+            display: none;
+          }
+        }
+
+        &:hover {
+          background-color: #fff;
+          border: $border-dark;
+
+          @media only screen and (max-width: $bp-mobile) {
+            border: none;
+            transform: translateY(-0.1rem);
+          }
+        }
+      }
+
+      &-bookmarked {
+        width: 19.4rem;
+        color: $color-primary-dark;
+        border: $color-primary-dark;
+
+        span {
+          display: '';
+        }
+        span:after {
+          content: 'ed';
+        }
+
+        @media only screen and (max-width: $bp-mobile) {
+          width: 7.2rem;
+          span {
+            display: none;
+          }
+        }
+
+        &:hover {
+          background-color: #fff;
+          border: $border-dark;
+
+          @media only screen and (max-width: $bp-mobile) {
+            border: none;
+            transform: translateY(-0.1rem);
+          }
+        }
+      }
+    }
+  }
+}

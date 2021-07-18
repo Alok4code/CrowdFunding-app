@@ -1,0 +1,69 @@
+//Primary colors
+$color-primary-light: #3cb4ac; //hsl(176, 50%, 47%)
+$color-primary-dark: #147b74; //hsl(176, 72%, 28%)
+
+//Other colors
+$color-black: #000000; //hsl(0, 0%, 0%)
+$color-grey: #7a7a7a; //hsl(0, 0%, 48%)
+$color-grey-light: #fafafa;
+
+//Font-family
+$font-primary: 'Commissioner', sans-serif;
+
+$border: 1px solid rgba($color-grey, 0.1);
+$border-dark: 1px solid rgba($color-grey, 1);
+
+$bp-tablet: 50em; //800px
+$bp-mobile: 39.375em; //800px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 16px defalut
+  scroll-behavior: smooth;
+
+  @media only screen and (max-width: $bp-tablet) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: $color-black;
+  background-color: rgba($color-grey-light, 1);
+  position: relative;
+}
+
+main {
+  max-width: 73rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.overlay__modal {
+  max-width: 73rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.overlay__success {
+  max-width: 54rem;
+  width: 90%;
+  height: 40rem;
+  margin: 0 auto;
+}
+
+.inactive,
+.overlay__inactive {
+  display: none;
+}

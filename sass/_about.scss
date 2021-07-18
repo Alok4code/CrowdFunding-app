@@ -1,0 +1,163 @@
+.main__section--3 {
+  background-color: #fff;
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+  margin: 2.6rem 0 0 0;
+  text-align: center;
+  border: $border;
+
+  .about--text {
+    padding: 2rem 0;
+    margin-bottom: 2.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+
+    .heading-3 {
+      font-size: 2rem;
+    }
+
+    .paragraph {
+      text-align: justify;
+    }
+  }
+
+  .about--card {
+    &-1,
+    &-2,
+    &-3 {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border: 1px solid rgba($color-grey, 0.5);
+      border-radius: 0.8rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2.6rem;
+      }
+
+      .card {
+        &--heading {
+          display: flex;
+          justify-content: space-between;
+
+          @media only screen and (max-width: $bp-mobile) {
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+          }
+
+          .heading {
+            &--bold {
+              font-size: 2rem;
+              font-weight: 600;
+            }
+
+            &--right {
+              font-weight: 500;
+              color: $color-primary-light;
+            }
+          }
+        }
+
+        &--bottom {
+          display: flex;
+          justify-content: space-between;
+
+          @media only screen and (max-width: $bp-mobile) {
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+          }
+
+          .stock--left {
+            text-align: center;
+            color: $color-grey;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+              display: block;
+              font-size: 3rem;
+              font-weight: 700;
+              color: $color-black;
+              margin-right: 0.5rem;
+            }
+          }
+
+          .card--btn {
+            font-family: $font-primary;
+            font-weight: 600;
+            font-size: 1.8rem;
+            border-style: none;
+            border-radius: 5rem;
+            color: #fff;
+            padding: 1.7rem;
+            width: 20.4rem;
+            background-color: $color-primary-light;
+
+            &:hover {
+              cursor: pointer;
+              background-color: $color-primary-dark;
+              transform: translateY(-0.1rem);
+            }
+          }
+        }
+      }
+
+      .para {
+        text-align: justify;
+      }
+    }
+
+    .inactive--card {
+      border: 1px solid rgba($color-grey, 0.1);
+
+      * {
+        pointer-events: none;
+      }
+
+      .card {
+        &--heading {
+          .heading {
+            &--bold {
+              color: rgba($color-grey, 0.5);
+            }
+            &--right {
+              color: rgba($color-primary-light, 0.5);
+            }
+          }
+        }
+
+        &--bottom {
+          .stock--left {
+            color: rgba($color-grey, 0.5);
+          }
+
+          span {
+            color: rgba($color-black, 0.5);
+          }
+
+          .card--btn {
+            background-color: $color-grey;
+
+            &:hover {
+              cursor: none;
+              background-color: $color-grey;
+              transform: translateY(0rem);
+            }
+          }
+        }
+      }
+
+      .para {
+        color: rgba($color-black, 0.5);
+      }
+    }
+  }
+}
